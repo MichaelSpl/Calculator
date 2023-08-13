@@ -1,0 +1,15 @@
+html {
+  background-color: rgb(94, 94, 94);
+}
+
+.output {
+  background-color: white;
+}
+
+.buttons {
+  display: grid;
+}
+
+button {
+    background-color: orange;
+}
