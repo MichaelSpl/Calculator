@@ -2,9 +2,17 @@ body {
   background-color: rgb(94, 94, 94);
 }
 
+table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
 input[type="text"] {
   width: 810px;
   height: 50px;
+  font-size: xx-large;
+  text-align: right;
 }
 
 .row_button {
@@ -12,4 +20,5 @@ input[type="text"] {
   border: 0;
   width: 200px;
   height: 100px;
+  font-size: xx-large;
 }
