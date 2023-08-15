@@ -2,7 +2,14 @@ body {
   background-color: rgb(94, 94, 94);
 }
 
+input[type="text"] {
+  width: 810px;
+  height: 50px;
+}
+
 .row_button {
   background-color: orange;
   border: 0;
+  width: 200px;
+  height: 100px;
 }
