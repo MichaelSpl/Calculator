@@ -15,10 +15,18 @@ input[type="text"] {
   text-align: right;
 }
 
-.row_button {
-  background-color: orange;
+input[type=button] {
+  background-color: #f1a50e;
   border: 0;
   width: 200px;
   height: 100px;
   font-size: xx-large;
+}
+
+input[type=button]:hover {
+  background-color: #f3b73f;
+}
+
+input[type=button]:active {
+  background-color: #cc8c0c;
 }
