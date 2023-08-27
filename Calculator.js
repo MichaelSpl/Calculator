@@ -24,23 +24,6 @@ function negOrPos() {
   }
   
   document.getElementById("output").value = "(-" + exp;
-  
-  /* Use for loop. Iterate through exp from end
-  to start until you stop either at start or before
-  an arithmetic symbol(+,-,*,÷). Insert "(-" at stop
-  location.*/
-
-  // if (exp.length-3 >= 0) {
-
-  // if (exp[exp.length-2] == "-" && exp[exp.length-3] == "(") { // splice doesn't work on string.
-  //newExp = exp.slice(0,exp.length-3) + exp.slice(exp.length-1);
-  //document.getElementById("output").value = newExp;
-  // } else {
-
-  // }
-  //} else {
-
-  //}
 }
 
 function solveExp() {
