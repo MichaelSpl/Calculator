@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(94, 94, 94);
 }
@@ -9,13 +13,13 @@ table {
 }
 
 input[type="text"] {
-  width: 810px;
+  width: 815px;
   height: 50px;
   font-size: xx-large;
   text-align: right;
 }
 
-input[type=button] {
+input[type="button"] {
   background-color: #f1a50e;
   border: 0;
   width: 200px;
@@ -23,10 +27,10 @@ input[type=button] {
   font-size: xx-large;
 }
 
-input[type=button]:hover {
+input[type="button"]:hover {
   background-color: #f3b73f;
 }
 
-input[type=button]:active {
+input[type="button"]:active {
   background-color: #cc8c0c;
 }

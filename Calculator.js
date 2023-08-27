@@ -8,23 +8,39 @@ function display(sym) {
 
 function negOrPos() {
   let exp = document.getElementById("output").value;
-  if (exp.length == 0) {
-    display("(-");
-    return;
-  }
+  let newExp = "";
 
-  if(exp.length == 1) {
-    document.getElementById("output").value = exp = "(-" + exp;
-    return;
-  }
-
-  /* if (exp.length-3 > 0) {
-    if (exp[exp.length-2] == "-" && exp[exp.length-3] == "(") {
-
+  for (let i = exp.length - 1; i >= 0; i--) {
+    if (isNaN(exp[i])) {
+      // Insert "(-" before arithmetic expression even if expression is -.
+      if(i-1 >= 0 && exp[i-1] == "(") {
+        newExp = exp.slice(0, i-1) + exp.slice(i+1);
+        document.getElementById("output").value = newExp;
+      } else {
+        document.getElementById("output").value = exp + "(-";
+      }
+      return;
     }
-  } else {
-    
-  } */
+  }
+  
+  document.getElementById("output").value = "(-" + exp;
+  
+  /* Use for loop. Iterate through exp from end
+  to start until you stop either at start or before
+  an arithmetic symbol(+,-,*,÷). Insert "(-" at stop
+  location.*/
+
+  // if (exp.length-3 >= 0) {
+
+  // if (exp[exp.length-2] == "-" && exp[exp.length-3] == "(") { // splice doesn't work on string.
+  //newExp = exp.slice(0,exp.length-3) + exp.slice(exp.length-1);
+  //document.getElementById("output").value = newExp;
+  // } else {
+
+  // }
+  //} else {
+
+  //}
 }
 
 function solveExp() {
