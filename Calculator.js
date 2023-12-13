@@ -1,7 +1,3 @@
-function clearScreen() {
-  document.getElementById("output").value = "";
-}
-
 function display(sym) {
   /*let exp = document.getElementById("output").value;
   let end = exp.substr(exp.length - 1);
@@ -22,27 +18,33 @@ function display(sym) {
   document.getElementById("output").value += sym;
 }
 
-let flip = false;
+let parAmt = 0;
+
+function clearScreen() {
+  document.getElementById("output").value = "";
+  parAmt = 0;
+}
 
 function parenthesis() {
   let exp = document.getElementById("output").value;
   if (exp.length >= 1) {
     let index = exp.charAt(exp.length - 1);
-    if (!isNaN(parseInt(index)) && flip) {
-      document.getElementById("output").value += ")";
-      flip = !flip;
-    } else if ((!isNaN(parseInt(index)) && !flip) || index === ".") {
-      document.getElementById("output").value += "x(";
-      flip = !flip;
-    } else {
+    if (index == "(" || (index == ")" && parAmt <= 0)) {
       document.getElementById("output").value += "(";
-      if (!flip) {
-        flip = !flip;
-      }
+      parAmt++;
+    } else if (index == "+" || index == "-" || index == "X" || index == "÷") {
+      document.getElementById("output").value += "(";
+      parAmt++;
+    } else if (!isNaN(index) && parAmt <= 0) {
+      document.getElementById("output").value += "(";
+      parAmt++;
+    } else if (parAmt > 0) {
+      parAmt--;
+      document.getElementById("output").value += ")";
     }
   } else {
     document.getElementById("output").value += "(";
-    flip = !flip;
+    parAmt++;
   }
 }
 
