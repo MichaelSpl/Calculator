@@ -3,12 +3,46 @@ function clearScreen() {
 }
 
 function display(sym) {
-  let exp = document.getElementById("output").value;
+  /*let exp = document.getElementById("output").value;
   let end = exp.substr(exp.length - 1);
   if (isNaN(sym) && isNaN(end)) {
-    alert("Invalid Input");
+    if (exp[exp.length - 2] == "(") {
+      if (sym == "÷" || sym == "X") {
+        end = exp.slice(0, exp.length - 1);
+        document.getElementById("output").value = end;
+        return;
+      }
+    }
+    // Problem here (click +/-, then X, then any other arithmetic symbol).
+    end = exp.slice(0, exp.length - 1) + sym;
+    document.getElementById("output").value = end;
   } else {
     document.getElementById("output").value += sym;
+  }*/
+  document.getElementById("output").value += sym;
+}
+
+let flip = false;
+
+function parenthesis() {
+  let exp = document.getElementById("output").value;
+  if (exp.length >= 1) {
+    let index = exp.charAt(exp.length - 1);
+    if (!isNaN(parseInt(index)) && flip) {
+      document.getElementById("output").value += ")";
+      flip = !flip;
+    } else if ((!isNaN(parseInt(index)) && !flip) || index === ".") {
+      document.getElementById("output").value += "x(";
+      flip = !flip;
+    } else {
+      document.getElementById("output").value += "(";
+      if (!flip) {
+        flip = !flip;
+      }
+    }
+  } else {
+    document.getElementById("output").value += "(";
+    flip = !flip;
   }
 }
 
