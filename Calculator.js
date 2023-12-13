@@ -2,6 +2,10 @@ function display(sym) {
   document.getElementById("output").value += sym;
 }
 
+function decimal() {
+  document.getElementById("output").value += '.';
+}
+
 let parAmt = 0;
 
 function clearScreen() {

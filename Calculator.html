@@ -36,8 +36,10 @@
         <td><input type="button" value="+" onclick="display('+')" /></td>
       </tr>
       <tr>
-        <td><input type="button" id="zero" value="0" onclick="display('0')" /></td>
-        <td><input type="button" value="." /></td>
+        <td colspan="2">
+          <input type="button" id="zero" value="0" onclick="display('0')"/>
+        </td>
+        <td><input type="button" value="." onclick="decimal()" /></td>
         <td><input type="button" value="=" onclick="solveProblem()" /></td>
       </tr>
     </table>
