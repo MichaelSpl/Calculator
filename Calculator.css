@@ -25,6 +25,7 @@ input[type="button"] {
   width: 200px;
   height: 100px;
   font-size: xx-large;
+  border-radius: 15px;
 }
 
 input[type="button"]:hover {
