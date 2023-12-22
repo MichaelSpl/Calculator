@@ -93,6 +93,7 @@ function solveProblem() {
   //Convert infix to postfix. Do decimal and parenthesis during this process.
   //(If percent or decimal find no number before them than an error is thrown.)
   let postFix = infixToPostfix(expr, input);
+  console.log(postFix);
   for (let i = 0; i < postFix.length; i++) {
     let curr = postFix[i];
   }
