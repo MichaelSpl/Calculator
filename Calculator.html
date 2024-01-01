@@ -12,9 +12,8 @@
         <td colspan="4"><input type="text" id="output" disabled /></td>
       </tr>
       <tr>
-        <td><input type="button" value="C" onclick="clearScreen()" /></td>
-        <td><input type="button" value="()" onclick="parenthesis()" /></td>
-        <td><input type="button" value="%" onclick="percent()"/></td>
+        <td colspan="2"><input type="button" id = "long_button" value="AC" onclick="clearScreen()" /></td>
+        <td><input type="button" value="DEL" onclick="remove()" /></td>
         <td><input type="button" value="/" onclick="display('/')" /></td>
       </tr>
       <tr>
@@ -36,11 +35,9 @@
         <td><input type="button" value="+" onclick="display('+')" /></td>
       </tr>
       <tr>
-        <td colspan="2">
-          <input type="button" id="zero" value="0" onclick="display('0')"/>
-        </td>
+        <td><input type="button" value="0" onclick="display('0')"/></td>
         <td><input type="button" value="." onclick="decimal()" /></td>
-        <td><input type="button" value="=" onclick="solveProblem()" /></td>
+        <td colspan = "2"><input type="button" id = "long_button" value="=" onclick="solveProblem()" /></td>
       </tr>
     </table>
     <script src="Calculator.js"></script>
